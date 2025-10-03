@@ -12,6 +12,7 @@
     <link rel="icon" href="{{ asset('assets/sunatnano.png') }}" type="image/png">
     <meta name="keywords"
         content="klinik sunat, sunat nano, sunat modern, sunat tanpa jahit, dokter berpengalaman, sunat nano sidoarjo, sunat nano surabaa, sunat nano madura, sunat nano jakarta, sunat nano bandung">
+    <meta name="google-site-verification" content="i8TS0P9jzlw8dSDhA51Ap6BxN_OMp3yzLLiu5SygRr0" />
 
     <style>
         [x-cloak] {
