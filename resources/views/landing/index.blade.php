@@ -408,7 +408,7 @@
                 <div class="relative">
                     <div class="flex items-center justify-center mx-auto mb-6">
                         <img src="{{ asset('assets/frame1.png') }}" alt="Fasilitas Modern"
-                            class="object-contain w-5/6 drop-shadow-lg">
+                            class="object-contain w-6/7 drop-shadow-lg">
                     </div>
                 </div>
 
@@ -416,9 +416,9 @@
                 <div class="flex flex-wrap items-center justify-center gap-6 lg:justify-start">
                     @foreach ($why as $index => $w2)
                         <div
-                            class="flex items-center px-6 py-4 transition-all duration-300 border-2 border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-medical-primary group">
+                            class="flex mx-auto justify-center items-center px-6 py-4 transition-all duration-300 border-2 border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-medical-primary group">
                             <!-- Dynamic Icons with Different Colors -->
-                            <div class="flex-shrink-0 mr-4">
+                            <div class="flex-shrink-0">
                                 @if ($index % 4 == 0)
                                     <div
                                         class="flex items-center justify-center w-10 h-10 text-blue-600 transition-transform bg-blue-100 rounded-full group-hover:scale-110">
