@@ -82,6 +82,9 @@
                                     class="px-6 py-3 text-sm font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-300">
                                     Deskripsi</th>
                                 <th
+                                    class="px-6 py-3 text-sm font-medium tracking-wider text-left text-gray-700 uppercase dark:text-gray-300">
+                                    Gambar</th>
+                                <th
                                     class="px-6 py-3 text-sm font-medium tracking-wider text-center text-gray-700 uppercase dark:text-gray-300">
                                     Aksi</th>
                             </tr>
@@ -93,7 +96,14 @@
                                     </td>
                                     <td class="px-6 py-4 text-sm text-gray-800 dark:text-gray-200">{{ $metode->name }}</td>
                                     <td class="px-6 py-4 text-sm text-gray-800 dark:text-gray-200">
-                                        {{ $metode->description }}
+                                        {{ $metode->description }}</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 dark:text-gray-200">
+                                        @if ($metode->image)
+                                            <img src="{{ asset('storage/' . $metode->image) }}" alt="{{ $metode->name }}"
+                                                class="object-cover w-16 h-16 rounded-lg shadow-md">
+                                        @else
+                                            <span class="italic text-gray-400">Tidak ada gambar</span>
+                                        @endif
                                     </td>
                                     <td class="px-6 py-4 text-sm text-center">
                                         <div class="flex items-center justify-center space-x-2">
@@ -114,9 +124,10 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="4"
-                                        class="px-6 py-4 text-sm text-center text-gray-500 dark:text-gray-400">Belum ada
-                                        metode tersedia.</td>
+                                    <td colspan="5"
+                                        class="px-6 py-4 text-sm text-center text-gray-500 dark:text-gray-400">
+                                        Belum ada metode tersedia.
+                                    </td>
                                 </tr>
                             @endforelse
                         </tbody>

@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -140,4 +141,199 @@ body {
         background-size: cover;
         background-position: center;
     }
+}
+
+.letter-0 {
+    color: #2563eb;
+}
+
+.letter-1 {
+    color: #10b981;
+}
+
+.letter-2 {
+    color: #fbbf24;
+}
+
+.letter-3 {
+    color: #f97316;
+}
+
+.letter-4 {
+    color: #ef4444;
+}
+
+.letter-5 {
+    color: #a855f7;
+}
+
+.letter-6 {
+    color: #06b6d4;
+}
+
+/* Background colors for circles */
+.bg-letter-0 {
+    background-color: #2563eb;
+}
+
+.bg-letter-1 {
+    background-color: #10b981;
+}
+
+.bg-letter-2 {
+    background-color: #fbbf24;
+}
+
+.bg-letter-3 {
+    background-color: #f97316;
+}
+
+.bg-letter-4 {
+    background-color: #ef4444;
+}
+
+.bg-letter-5 {
+    background-color: #a855f7;
+}
+
+.bg-letter-6 {
+    background-color: #06b6d4;
+}
+
+/* Text colors - solid per item */
+.text-letter-0 {
+    color: #2563eb;
+}
+
+.text-letter-1 {
+    color: #10b981;
+}
+
+.text-letter-2 {
+    color: #fbbf24;
+}
+
+.text-letter-3 {
+    color: #f97316;
+}
+
+.text-letter-4 {
+    color: #ef4444;
+}
+
+.text-letter-5 {
+    color: #a855f7;
+}
+
+.text-letter-6 {
+    color: #06b6d4;
+}
+
+/* Navigation Links - Each menu has different color */
+.nav-link {
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-blue {
+    color: #2563eb;
+}
+
+.nav-green {
+    color: #10b981;
+}
+
+.nav-orange {
+    color: #f97316;
+}
+
+.nav-purple {
+    color: #a855f7;
+}
+
+/* Underline effect on hover - matching the text color */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: width 0.3s ease;
+}
+
+.nav-blue::after {
+    background-color: #2563eb;
+}
+
+.nav-green::after {
+    background-color: #10b981;
+}
+
+.nav-orange::after {
+    background-color: #f97316;
+}
+
+.nav-purple::after {
+    background-color: #a855f7;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    filter: brightness(1.2);
+}
+
+/* Button Konsultasi - Gradient */
+.btn-konsultasi {
+    background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+}
+
+.btn-konsultasi:hover {
+    background: linear-gradient(135deg, #059669 0%, #0891b2 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #10b981, #f97316);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn-secondary {
+    border-color: #2563eb;
+    color: #2563eb;
+    background: white;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+[class^="letter-"] {
+    display: inline-block;
+    opacity: 0;
+    animation: floatUp 0.6s ease forwards;
 }

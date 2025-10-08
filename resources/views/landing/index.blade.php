@@ -14,7 +14,7 @@
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="i8TS0P9jzlw8dSDhA51Ap6BxN_OMp3yzLLiu5SygRr0" />
 
-    <link rel="icon" href="{{ asset('assets/sunatnano.png') }}" type="image/png">
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512">
 
     <style>
         [x-cloak] {
@@ -27,16 +27,10 @@
 
 <body class="font-sans antialiased bg-white">
 
-    <!-- Header Navigation -->
-    <!-- PASTIKAN Alpine.js sudah di-include di layout SEBELUM closing </body>:
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
--->
-
     <div x-data="{ open: false }">
         <header class="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm">
             <nav class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between h-20">
-
                     <!-- Logo Klinik -->
                     <div class="flex-shrink-0">
                         <div class="flex items-center space-x-3">
@@ -49,30 +43,26 @@
                         </div>
                     </div>
 
-                    <!-- Desktop Navigation -->
                     <div class="items-center hidden space-x-8 lg:flex">
-                        <a href="#beranda"
-                            class="font-medium transition-colors text-medical-primary hover:text-blue-700">
+                        <a href="#beranda" class="text-xl font-medium transition-all nav-link nav-blue">
                             Beranda
                         </a>
-                        <a href="#layanan"
-                            class="font-medium transition-colors text-medical-primary hover:text-blue-700">
+                        <a href="#layanan" class="text-xl font-medium transition-all nav-link nav-green">
                             Layanan
                         </a>
-                        <a href="#keunggulan"
-                            class="font-medium transition-colors text-medical-primary hover:text-blue-700">
+                        <a href="#keunggulan" class="text-xl font-medium transition-all nav-link nav-orange">
                             Keunggulan
                         </a>
-                        <a href="#dokter"
-                            class="font-medium transition-colors text-medical-primary hover:text-blue-700">
+                        <a href="#dokter" class="text-xl font-medium transition-all nav-link nav-purple">
                             Tim Dokter
                         </a>
-                    </div>
-
-                    <div class="items-center hidden space-x-8 lg:flex">
                         <a href="https://wa.me/6285236959788?text=Halo%20saya%20ingin%20konsultasi" target="_blank"
-                            class="px-6 py-3 font-semibold text-white transition-colors rounded-lg bg-medical-primary hover:bg-blue-700">
-                            Konsultasi
+                            class="flex items-center px-6 py-3 space-x-2 font-bold text-white transition-all rounded-lg btn-konsultasi">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            <span>Konsultasi</span>
                         </a>
                     </div>
 
@@ -121,22 +111,21 @@
 
                     <!-- Menu Content -->
                     <div class="p-6">
-                        <!-- Navigation Links -->
                         <nav class="mb-6 space-y-1">
                             <a href="#beranda" @click="open = false"
-                                class="block px-4 py-3 text-base font-medium text-gray-700 transition-colors rounded-md hover:bg-gray-100 hover:text-medical-primary">
+                                class="block px-4 py-3 text-base font-semibold text-blue-600 transition-colors rounded-md hover:bg-blue-50">
                                 Beranda
                             </a>
                             <a href="#layanan" @click="open = false"
-                                class="block px-4 py-3 text-base font-medium text-gray-700 transition-colors rounded-md hover:bg-gray-100 hover:text-medical-primary">
+                                class="block px-4 py-3 text-base font-semibold text-green-500 transition-colors rounded-md hover:bg-green-50">
                                 Layanan
                             </a>
                             <a href="#keunggulan" @click="open = false"
-                                class="block px-4 py-3 text-base font-medium text-gray-700 transition-colors rounded-md hover:bg-gray-100 hover:text-medical-primary">
+                                class="block px-4 py-3 text-base font-semibold text-orange-500 transition-colors rounded-md hover:bg-orange-50">
                                 Keunggulan
                             </a>
                             <a href="#dokter" @click="open = false"
-                                class="block px-4 py-3 text-base font-medium text-gray-700 transition-colors rounded-md hover:bg-gray-100 hover:text-medical-primary">
+                                class="block px-4 py-3 text-base font-semibold text-purple-500 transition-colors rounded-md hover:bg-purple-50">
                                 Tim Dokter
                             </a>
                         </nav>
@@ -153,23 +142,67 @@
         </template>
     </div>
 
-
-
     <!-- Hero Section -->
-    <section id="beranda" class="relative pt-20 pb-16 medical-light">
+    <section id="beranda" class="relative pt-20 pb-16 medical-light"
+        style="background-image: url('{{ asset('assets/bg6.png') }}'); background-size: cover; background-position:center;">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="grid items-center gap-12 lg:grid-cols-2">
 
                 <!-- Content -->
-                <div class="mt-5 space-y-8 text-medical-primay">
-
+                <div class="order-2 mt-5 space-y-8 text-center md:order-1 text-medical-primary md:text-left">
                     <div>
                         @if ($klinik && $klinik->title)
-                            <h1
-                                class="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl text-medical-primary">
-                                {{ $klinik->title }}
+                            @php
+                                $title = $klinik->title;
+                                $words = explode(' ', $title);
+                                $lastWord = array_pop($words); // ambil kata terakhir
+                                $colorIndex = 0;
+                                $output = '';
+
+                                // proses semua kata kecuali terakhir
+                                foreach ($words as $word) {
+                                    for ($i = 0; $i < strlen($word); $i++) {
+                                        $char = $word[$i];
+                                        $delay = $colorIndex * 0.1;
+                                        $output .=
+                                            '<span class="letter-' .
+                                            $colorIndex % 7 .
+                                            '" style="animation-delay:' .
+                                            $delay .
+                                            's">' .
+                                            $char .
+                                            '</span>';
+                                        $colorIndex++;
+                                    }
+                                    $output .= ' '; // spasi antar kata
+                                }
+
+                                // tambahkan line break sebelum kata terakhir
+                                $output .= '<br>';
+
+                                // proses kata terakhir
+                                for ($i = 0; $i < strlen($lastWord); $i++) {
+                                    $char = $lastWord[$i];
+                                    $delay = $colorIndex * 0.1;
+                                    $output .=
+                                        '<span class="letter-' .
+                                        $colorIndex % 7 .
+                                        '" style="animation-delay:' .
+                                        $delay .
+                                        's">' .
+                                        $char .
+                                        '</span>';
+                                    $colorIndex++;
+                                }
+                            @endphp
+
+                            <h1 class="mb-6 text-6xl font-bold leading-tight -mt-7 md:-mt-0 md:text-5xl lg:text-6xl">
+                                {!! $output !!}
                             </h1>
                         @endif
+
+
+
 
 
                         @if ($klinik && $klinik->description)
@@ -181,139 +214,197 @@
                     </div>
 
                     <!-- Key Benefits -->
-                    <div class="grid gap-4 sm:grid-cols-2">
+                    <div class="grid gap-4 grid-cols-2">
+                        @php $colorIndex = 0; @endphp
                         @foreach ($why as $w1)
                             <div class="flex items-center space-x-3">
-                                <div class="flex items-center justify-center w-8 h-8 rounded-full bg-medical-primary">
+                                <div
+                                    class="flex items-center justify-center w-8 h-8 rounded-full bg-letter-{{ $colorIndex % 7 }}">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                             d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                             clip-rule="evenodd"></path>
                                     </svg>
                                 </div>
-                                <span class="font-semibold text-medical-primary">{{ $w1->name }}</span>
+                                <span
+                                    class="font-semibold text-letter-{{ $colorIndex % 7 }}">{{ $w1->name }}</span>
                             </div>
+                            @php $colorIndex++; @endphp
                         @endforeach
                     </div>
+
+                    <style>
+
+                    </style>
 
 
                     <!-- CTA Buttons -->
                     <div class="flex flex-col gap-4 sm:flex-row">
                         <a href="https://wa.me/6285236959788?text=Halo%20saya%20ingin%20konsultasi" target="_blank"
-                            class="flex items-center justify-center px-8 py-4 space-x-2 text-lg font-bold text-white rounded-lg bg-medical-primary">
+                            class="flex items-center justify-center px-8 py-4 space-x-2 text-lg font-extrabold text-white transition-all bg-blue-600 rounded-lg hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
                             <span>Konsultasi Gratis</span>
                         </a>
                         <a href="#layanan"
-                            class="px-8 py-4 text-lg font-bold text-center border-2 rounded-lg border-medical-primary text-medical-primary">
+                            class="px-8 py-4 text-lg font-bold text-center border-2 rounded-lg btn-secondary">
                             Lihat Layanan
                         </a>
                     </div>
-
-                    <!-- Stats -->
-
                 </div>
-
                 <!-- Medical Illustration/Image -->
-                <div class="relative ">
-
+                <div class="relative order-1 md:order-2">
                     <div class="flex items-center justify-center mx-auto mb-6">
                         <img src="{{ asset('assets/home.png') }}" alt="Fasilitas Modern"
-                            class="object-contain w-full">
+                            class="object-contain w-full" loading="lazy">
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="pt-8 mt-5 border-t border-medical-warning">
                 <div class="grid grid-cols-2 gap-6 text-center md:grid-cols-4">
                     @foreach ($review as $review)
-                        <div>
-                            <div class="text-3xl font-bold text-medical-primary">{{ $review->review_count }}+</div>
+                        <div x-data="{ count: 0, started: false }" x-init="let target = {{ $review->review_count }};
+                        let duration = 2000; // 2 detik
+                        let el = $el.querySelector('span');
+
+                        let observer = new IntersectionObserver((entries, observer) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting && !started) {
+                                    started = true;
+                                    let start = null;
+
+                                    function animate(timestamp) {
+                                        if (!start) start = timestamp;
+                                        let progress = (timestamp - start) / duration;
+                                        if (progress > 1) progress = 1;
+
+                                        count = Math.floor(progress * target);
+
+                                        if (progress < 1) {
+                                            requestAnimationFrame(animate);
+                                        }
+                                    }
+
+                                    requestAnimationFrame(animate);
+                                    observer.unobserve($el); // berhenti observe setelah jalan
+                                }
+                            });
+                        }, { threshold: 0.5 }); // minimal 50% terlihat
+
+                        observer.observe($el);">
+                            <div class="text-3xl font-bold text-medical-primary">
+                                <span x-text="count"></span>+
+                            </div>
                             <div class="text-sm text-medical-neutral">{{ $review->name }}</div>
                         </div>
                     @endforeach
                 </div>
             </div>
         </div>
-
         </div>
     </section>
 
 
     <!-- Full Width Banner Carousel Section -->
-    <section id="banner" class="relative w-full overflow-hidden">
-        <!-- Section Header -->
-        <div class="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <!-- Carousel Container -->
+    <section id="banner" class="relative w-full py-8 overflow-hidden">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <!-- Banner Container -->
             <div class="relative w-full">
-                <!-- Carousel Wrapper -->
-                <div id="bannerCarousel" class="relative w-full h-96 md:h-[800px] overflow-hidden">
-                    <!-- Carousel Items -->
-                    <div id="carouselTrack" class="flex h-full transition-transform duration-500 ease-in-out"
-                        style="transform: translateX(0%);">
-                        @foreach ($banner as $index => $bannerItem)
-                            <div class="relative flex-shrink-0 w-full h-full group">
-                                <a href="https://wa.me/6285236959788?text=Halo%20saya%20ingin%20konsultasi"
-                                    target="_blank" class="block w-full h-full">
+                <!-- Single Banner Wrapper -->
+                <div class="relative w-full overflow-hidden rounded-md">
+                    @if (!empty($banner) && isset($banner[0]))
+                        @php $bannerItem = $banner[0]; @endphp
 
-                                    @if ($bannerItem->type === 'video')
-                                        <!-- Video Content -->
-                                        <div class="relative w-full h-full">
-                                            <video
-                                                class="object-cover w-full h-full transition-transform duration-700 rounded-xl"
-                                                autoplay muted loop playsinline preload="metadata">
-                                                <source src="{{ asset('storage/' . $bannerItem->media) }}"
-                                                    type="video/mp4">
-                                                <!-- Fallback -->
-                                                <div
-                                                    class="flex items-center justify-center h-full bg-gradient-to-br from-gray-300 to-gray-400">
-                                                    <div class="text-center text-white">
-                                                        <svg class="w-24 h-24 mx-auto mb-4" fill="currentColor"
-                                                            viewBox="0 0 24 24">
-                                                            <path d="M8 5v14l11-7z" />
-                                                        </svg>
-                                                        <p class="text-lg font-bold">Video tidak dapat dimuat</p>
-                                                    </div>
-                                                </div>
-                                            </video>
+                        <a href="https://wa.me/6285236959788?text=Halo%20saya%20ingin%20konsultasi" target="_blank"
+                            class="relative block w-full overflow-hidden">
+
+                            @if ($bannerItem->type === 'video')
+                                <!-- Video Content -->
+                                <div class="relative w-full">
+                                    <video class="w-full h-auto transition-transform duration-700" autoplay muted loop
+                                        playsinline preload="metadata">
+                                        <source src="{{ asset('storage/' . $bannerItem->media) }}" type="video/mp4">
+                                        <!-- Fallback -->
+                                        <div
+                                            class="flex items-center justify-center h-full bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600">
+                                            <div class="text-center text-white">
+                                                <svg class="w-20 h-20 mx-auto mb-4 animate-pulse" fill="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                                <p class="text-lg font-bold">Video tidak dapat dimuat</p>
+                                            </div>
                                         </div>
-                                    @else
-                                        <!-- Image Content -->
-                                        <div class="relative w-full h-full">
-                                            <img src="{{ asset('storage/' . $bannerItem->media) }}"
-                                                alt="Banner Image {{ $bannerItem->title }}"
-                                                class="object-cover w-full h-full transition-transform duration-700 rounded-xl"
-                                                loading="lazy"
-                                                onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full bg-gradient-to-br from-gray-300 to-gray-400\'><div class=\'text-center text-white\'><svg class=\'w-24 h-24 mx-auto mb-4\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><polyline points=\'21,15 16,10 5,21\'/></svg><p class=\'text-lg font-bold\'>Gambar tidak dapat dimuat</p></div></div>'">
-                                        </div>
-                                    @endif
-                                </a>
+                                    </video>
+                                </div>
+                            @else
+                                <!-- Image Content -->
+                                <div class="relative w-full">
+                                    <img src="{{ asset('storage/' . $bannerItem->media) }}"
+                                        alt="Banner Image {{ $bannerItem->title ?? 'Sunat Nano' }}"
+                                        class="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                                        loading="lazy"
+                                        onerror="this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600\'><div class=\'text-center text-white\'><svg class=\'w-20 h-20 mx-auto mb-4 animate-pulse\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\' stroke-width=\'2\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\' ry=\'2\'/><circle cx=\'8.5\' cy=\'8.5\' r=\'1.5\'/><polyline points=\'21,15 16,10 5,21\'/></svg><p class=\'text-lg font-bold\'>Gambar tidak dapat dimuat</p></div></div>'">
+
+                                    <!-- Image Overlay Gradient -->
+                                    <div
+                                        class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/30 via-transparent to-transparent group-hover:opacity-100">
+                                    </div>
+                                </div>
+                            @endif
+
+
+                        </a>
+                    @else
+                        <!-- Empty State -->
+                        <div
+                            class="flex items-center justify-center h-full bg-gradient-to-br from-purple-400 via-purple-500 to-purple-600">
+                            <div class="text-center text-white">
+                                <svg class="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                    <circle cx="8.5" cy="8.5" r="1.5" />
+                                    <polyline points="21,15 16,10 5,21" />
+                                </svg>
+                                <p class="text-lg font-bold">Banner belum tersedia</p>
                             </div>
-                        @endforeach
-
-                    </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="layanan" class="py-20 bg-white">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <!-- Header Section -->
             <div class="mb-16 text-center">
-                <h2 class="mb-4 text-4xl font-bold text-medical-primary md:text-5xl">
-                    Layanan <span class="text-medical-warning">Sunat Nano</span>
+                @php
+                    $title = 'Layanan Sunat Nano';
+                    $colorIndex = 0;
+                    $output = '';
+
+                    for ($i = 0; $i < strlen($title); $i++) {
+                        $char = $title[$i];
+                        if ($char === ' ') {
+                            $output .= ' ';
+                        } else {
+                            $output .=
+                                '<span class="letter-' . $colorIndex % 7 . '">' . htmlspecialchars($char) . '</span>';
+                            $colorIndex++;
+                        }
+                    }
+                @endphp
+
+                <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+                    {!! $output !!}
                 </h2>
-                <p class="max-w-2xl mx-auto text-lg text-white">
-                    Teknologi terdepan dengan pendekatan ramah untuk kenyamanan dan keamanan
-                </p>
                 <div
-                    class="w-24 h-1 mx-auto mt-6 rounded-full bg-gradient-to-r from-medical-primary via-yellow-400 to-yellow-500">
+                    class="w-24 h-1 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-600 via-green-500 to-purple-500">
                 </div>
             </div>
 
@@ -321,76 +412,176 @@
             <div class="flex flex-wrap justify-center gap-8 mx-auto">
                 @foreach ($service as $index => $serviceItem)
                     <div
-                        class="relative w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] p-8 overflow-hidden transition-all duration-300 transform rounded-3xl hover:shadow-2xl hover:-translate-y-2 group
-                @if ($index % 3 == 0) bg-[#DEC8FE]
-                @elseif($index % 3 == 1) bg-[#704FE6]
-                @else bg-[#FFD464] @endif">
+                        class="relative w-full sm:w-[calc(50%-1rem)] lg:w-[calc(25%-1.5rem)] p-8 overflow-hidden transition-all duration-300 transform rounded-3xl hover:shadow-2xl hover:-translate-y-2 group border-4
+                    @if ($index % 4 == 0) bg-purple-100 border-purple-400
+                    @elseif($index % 4 == 1)
+                        bg-blue-500 border-blue-600
+                    @elseif($index % 4 == 2)
+                        bg-yellow-300 border-yellow-500
+                    @else
+                        bg-purple-200 border-purple-400 @endif">
 
-                        <!-- Decorative Circle Pattern (Top Left) -->
+                        <!-- Decorative Circle Pattern (Top Left) - Lebih kecil -->
                         <div
-                            class="absolute w-40 h-40 rounded-full -top-10 -left-10 opacity-20
-                    @if ($index % 3 == 0) bg-[#704FE6]
-                    @elseif($index % 3 == 1) bg-[#FFD464]
-                    @else bg-white @endif">
+                            class="absolute w-24 h-24 rounded-full -top-6 -left-6 opacity-20
+                        @if ($index % 4 == 0) bg-purple-500
+                        @elseif($index % 4 == 1) bg-yellow-300
+                        @elseif($index % 4 == 2) bg-white
+                        @else bg-purple-400 @endif">
                         </div>
 
-                        <!-- Decorative Circles (Concentric Rings) -->
-                        <div
-                            class="absolute w-32 h-32 rounded-full border-8 -top-8 -left-8 opacity-25
-                    @if ($index % 3 == 0) border-[#704FE6]
-                    @elseif($index % 3 == 1) border-[#FFD464]
-                    @else border-white @endif">
-                        </div>
-
-                        <div
-                            class="absolute w-24 h-24 rounded-full border-8 -top-6 -left-6 opacity-30
-                    @if ($index % 3 == 0) border-[#704FE6]
-                    @elseif($index % 3 == 1) border-[#FFD464]
-                    @else border-white @endif">
-                        </div>
-
-                        <!-- Decorative Star (Top Right) -->
-                        <div class="absolute w-32 h-32 opacity-25 -top-4 -right-4">
+                        <!-- Decorative Star (Top Right) - Lebih kecil -->
+                        <div class="absolute w-20 h-20 opacity-20 -top-3 -right-3">
                             <svg viewBox="0 0 100 100"
                                 class="w-full h-full
-                        @if ($index % 3 == 0) fill-[#704FE6]
-                        @elseif($index % 3 == 1) fill-[#FFD464]
-                        @else fill-white @endif">
+                            @if ($index % 4 == 0) fill-purple-500
+                            @elseif($index % 4 == 1) fill-yellow-300
+                            @elseif($index % 4 == 2) fill-orange-400
+                            @else fill-purple-400 @endif">
                                 <polygon points="50,5 60,40 95,45 65,65 70,95 50,80 30,95 35,65 5,45 40,40" />
                             </svg>
                         </div>
 
-                        <!-- Decorative Zigzag Lines (Top Right) -->
-                        <div class="absolute -top-2 -right-2 opacity-30">
-                            <svg width="80" height="80" viewBox="0 0 80 80"
+                        <!-- Decorative Zigzag Lines (Bottom Right) - Dipindah ke bawah -->
+                        <div class="absolute -bottom-2 -right-2 opacity-20">
+                            <svg width="60" height="60" viewBox="0 0 60 60"
                                 class="
-                        @if ($index % 3 == 0) stroke-[#704FE6]
-                        @elseif($index % 3 == 1) stroke-[#FFD464]
-                        @else stroke-white @endif"
-                                fill="none" stroke-width="8">
-                                <path d="M10,10 L20,25 L10,40 L20,55 L10,70" />
-                                <path d="M30,10 L40,25 L30,40 L40,55 L30,70" />
-                                <path d="M50,10 L60,25 L50,40 L60,55 L50,70" />
+                            @if ($index % 4 == 0) stroke-purple-500
+                            @elseif($index % 4 == 1) stroke-yellow-300
+                            @elseif($index % 4 == 2) stroke-orange-400
+                            @else stroke-purple-400 @endif"
+                                fill="none" stroke-width="6">
+                                <path d="M5,5 L15,20 L5,35 L15,50" />
+                                <path d="M25,5 L35,20 L25,35 L35,50" />
+                                <path d="M45,5 L55,20 L45,35 L55,50" />
                             </svg>
                         </div>
 
-                        <!-- Icon Container with Background -->
+                        <!-- Icon Container -->
+                        <!-- Icon Container -->
                         <div
-                            class="relative z-10 flex items-center justify-center p-4 mx-auto mb-6 transition-transform duration-300 w-36 h-36 rounded-2xl group-hover:scale-110">
+                            class="relative z-10 flex items-center justify-center mx-auto mb-6 transition-transform duration-300 w-32 h-32 rounded-full group-hover:scale-110 border-4
+    @if ($index % 4 == 0) border-purple-500
+    @elseif($index % 4 == 1) border-yellow-500
+    @elseif($index % 4 == 2) border-orange-500
+    @else border-purple-500 @endif">
                             <img src="{{ $serviceItem->image ? asset('storage/' . $serviceItem->image) : asset('assets/default.jpg') }}"
-                                alt="{{ $serviceItem->name }}" class="object-contain w-36 h-36">
+                                alt="{{ $serviceItem->name }}" class="object-cover w-full h-full rounded-full"
+                                loading="lazy">
                         </div>
 
                         <!-- Service Name -->
                         <h3
                             class="text-center relative z-10 mb-4 text-xl font-bold transition-colors duration-300
-                    @if ($index % 3 == 0) text-[#704FE6]
-                    @elseif($index % 3 == 1) text-white
-                    @else text-gray-900 @endif">
+                        @if ($index % 4 == 0) text-purple-700
+                        @elseif($index % 4 == 1) text-white
+                        @elseif($index % 4 == 2) text-gray-900
+                        @else text-purple-700 @endif">
                             {{ $serviceItem->name }}
                         </h3>
 
+                        <!-- Service Description -->
+                        <p
+                            class="text-center relative z-10 text-sm leading-relaxed
+                        @if ($index % 4 == 0) text-purple-600
+                        @elseif($index % 4 == 1) text-white/95
+                        @elseif($index % 4 == 2) text-gray-800
+                        @else text-purple-600 @endif">
+                            {{ $serviceItem->description }}
+                        </p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
+    <!-- Metode Section -->
+    <section id="metode" class="py-20 bg-white"
+        style="background-image: url('{{ asset('assets/bg8.png') }}'); background-size: cover; background-position:center;">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <!-- Header Section -->
+            <div class="mb-16 text-center">
+                @php
+                    $title = 'Metode Sunat Nano';
+                    $colorIndex = 0;
+                    $output = '';
+
+                    for ($i = 0; $i < strlen($title); $i++) {
+                        $char = $title[$i];
+                        if ($char === ' ') {
+                            $output .= ' ';
+                        } else {
+                            $output .=
+                                '<span class="letter-' . $colorIndex % 7 . '">' . htmlspecialchars($char) . '</span>';
+                            $colorIndex++;
+                        }
+                    }
+                @endphp
+
+                <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+                    {!! $output !!}
+                </h2>
+                <div
+                    class="w-24 h-1 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-600 via-green-500 to-purple-500">
+                </div>
+            </div>
+
+            <!-- Metode List -->
+            <div class="space-y-16">
+                @foreach ($metode as $index => $item)
+                    <div
+                        class="grid items-center gap-8 lg:grid-cols-2 {{ $index % 2 == 0 ? '' : 'lg:grid-flow-dense' }}">
+
+                        <!-- Image -->
+                        <div class="relative mx-auto {{ $index % 2 == 0 ? '' : 'lg:col-start-2' }}">
+
+                            <img src="{{ $item->image ? asset('storage/' . $item->image) : 'https://via.placeholder.com/600x400?text=Metode' }}"
+                                alt="{{ $item->nama_metode }}"
+                                class="object-cover w-full transition-transform duration-500 md:h-80" loading="lazy">
+
+
+                            <!-- Decorative Element -->
+                            <div
+                                class="absolute w-32 h-32 rounded-full -z-10 {{ $index % 2 == 0 ? '-right-8 -bottom-8' : '-left-8 -bottom-8' }} bg-gradient-to-br from-purple-200 to-blue-200 blur-2xl opacity-50">
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="relative {{ $index % 2 == 0 ? '' : 'lg:col-start-1 lg:row-start-1' }}">
+                            <div class="space-y-4">
+                                <!-- Title -->
+                                <h3 class="text-3xl font-bold text-medical-primary md:text-4xl">
+                                    {{ $item->name }}
+                                </h3>
+
+                                <!-- Divider -->
+                                <div class="w-20 h-1 rounded-full bg-gradient-to-r from-purple-500 to-blue-500"></div>
+
+                                <!-- Description -->
+                                <p class="text-lg leading-relaxed text-gray-600">
+                                    {{ $item->description }}
+                                </p>
+
+                                <!-- Features (if available) -->
+                                @if (isset($item->keunggulan) && $item->keunggulan)
+                                    <ul class="space-y-3">
+                                        @foreach (explode(',', $item->keunggulan) as $keunggulan)
+                                            <li class="flex items-start space-x-3">
+                                                <div
+                                                    class="flex items-center justify-center flex-shrink-0 w-6 h-6 mt-1 text-white rounded-full bg-gradient-to-br from-purple-500 to-blue-500">
+                                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <span class="text-gray-700">{{ trim($keunggulan) }}</span>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </div>
+                        </div>
                     </div>
                 @endforeach
             </div>
@@ -401,8 +592,25 @@
     <section id="keunggulan" class="py-20 bg-white">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
-                <h2 class="mb-4 text-3xl font-bold text-medical-primary md:text-4xl">
-                    Mengapa <span class="text-medical-warning">Memilih Kami ?</span>
+                @php
+                    $title = 'Mengapa Memilih Kami ?';
+                    $colorIndex = 0;
+                    $output = '';
+
+                    for ($i = 0; $i < strlen($title); $i++) {
+                        $char = $title[$i];
+                        if ($char === ' ') {
+                            $output .= ' ';
+                        } else {
+                            $output .=
+                                '<span class="letter-' . $colorIndex % 7 . '">' . htmlspecialchars($char) . '</span>';
+                            $colorIndex++;
+                        }
+                    }
+                @endphp
+
+                <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+                    {!! $output !!}
                 </h2>
                 <div class="w-24 h-1 mx-auto mb-6 rounded-full bg-medical-primary"></div>
             </div>
@@ -411,7 +619,7 @@
                 <div class="relative">
                     <div class="flex items-center justify-center mx-auto mb-6">
                         <img src="{{ asset('assets/frame1.png') }}" alt="Fasilitas Modern"
-                            class="object-contain w-6/7 drop-shadow-lg">
+                            class="object-contain w-6/7 drop-shadow-lg" loading="lazy">
                     </div>
                 </div>
 
@@ -419,7 +627,7 @@
                 <div class="flex flex-wrap items-center justify-center gap-6 lg:justify-start">
                     @foreach ($why as $index => $w2)
                         <div
-                            class="flex mx-auto justify-center items-center px-6 py-4 transition-all duration-300 border-2 border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-medical-primary group">
+                            class="flex items-center justify-center px-6 py-4 mx-auto transition-all duration-300 border-2 border-gray-200 rounded-full shadow-sm hover:shadow-md hover:border-medical-primary group">
                             <!-- Dynamic Icons with Different Colors -->
                             <div class="flex-shrink-0">
                                 @if ($index % 4 == 0)
@@ -476,8 +684,25 @@
 
             <!-- Section Header -->
             <div class="mb-16 text-center">
-                <h2 class="mb-4 text-3xl font-extrabold text-medical-primary md:text-4xl">
-                    <span class="text-medical-warning">Paket & Promo</span> Kami
+                @php
+                    $title = 'Paket & Promo Kami';
+                    $colorIndex = 0;
+                    $output = '';
+
+                    for ($i = 0; $i < strlen($title); $i++) {
+                        $char = $title[$i];
+                        if ($char === ' ') {
+                            $output .= ' ';
+                        } else {
+                            $output .=
+                                '<span class="letter-' . $colorIndex % 7 . '">' . htmlspecialchars($char) . '</span>';
+                            $colorIndex++;
+                        }
+                    }
+                @endphp
+
+                <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+                    {!! $output !!}
                 </h2>
                 <div class="w-24 h-1 mx-auto mb-6 rounded-full bg-medical-primary"></div>
             </div>
@@ -505,7 +730,8 @@
                             <div class="flex flex-col h-full text-center">
                                 <div class="mb-4">
                                     <img src="{{ $p->image ? asset('storage/' . $p->image) : 'https://via.placeholder.com/200x200?text=No+Image' }}"
-                                        alt="{{ $p->nama_paket }}" class="object-cover w-24 h-24 mx-auto shadow-md">
+                                        alt="{{ $p->nama_paket }}" class="object-cover w-24 h-24 mx-auto shadow-md"
+                                        loading="lazy">
                                 </div>
                                 <h3
                                     class="mb-4 text-xl font-bold @if ($p->is_bestseller == 1) text-white @else text-gray-900 @endif min-h-[3.5rem] flex items-center justify-center">
@@ -532,7 +758,8 @@
                         <div
                             class="relative flex items-center justify-center transition-all duration-300 rounded-2xl ">
                             <img src="{{ $pr->image ? asset('storage/' . $pr->image) : 'https://via.placeholder.com/200x200?text=No+Image' }}"
-                                alt="{{ $pr->name }}" class="object-contain w-full h-full rounded-2xl">
+                                alt="{{ $pr->name }}" class="object-contain w-full h-full rounded-2xl"
+                                loading="lazy">
                         </div>
                     @endforeach
                 </div>
@@ -541,8 +768,25 @@
 
             <!-- Facilities Section Header -->
             <div id="fasilitas" class="mt-16 mb-16 text-center">
-                <h2 class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
-                    Fasilitas Klinik
+                @php
+                    $title = 'Fasilitas Klinik';
+                    $colorIndex = 0;
+                    $output = '';
+
+                    for ($i = 0; $i < strlen($title); $i++) {
+                        $char = $title[$i];
+                        if ($char === ' ') {
+                            $output .= ' ';
+                        } else {
+                            $output .=
+                                '<span class="letter-' . $colorIndex % 7 . '">' . htmlspecialchars($char) . '</span>';
+                            $colorIndex++;
+                        }
+                    }
+                @endphp
+
+                <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+                    {!! $output !!}
                 </h2>
                 <div class="w-24 h-1 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-500 to-blue-500"></div>
             </div>
@@ -551,10 +795,10 @@
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 @foreach ($fasilitas as $item)
                     <div
-                        class="relative overflow-hidden transition-all duration-300 transform shadow-lg group rounded-2xl hover:shadow-2xl hover:-translate-y-2">
+                        class="relative h-64 overflow-hidden transition-all duration-300 transform shadow-lg group rounded-2xl hover:shadow-2xl hover:-translate-y-2">
                         <img src="{{ $item->image ? asset('storage/' . $item->image) : 'https://via.placeholder.com/400x300?text=No+Image' }}"
                             alt="{{ $item->nama_fasilitas }}"
-                            class="object-cover w-full h-64 transition-transform duration-300 group-hover:scale-110"
+                            class="absolute inset-0 object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
                             loading="lazy">
 
                         <div
@@ -576,120 +820,150 @@
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <!-- Header Section -->
             <div class="mb-16 text-center">
-                <h2 class="mb-4 text-4xl font-bold text-medical-primary md:text-5xl">
-                    Tim <span class="text-medical-warning">Dokter Spesialis</span>
+                @php
+                    $title = 'Tim Dokter Spesialis';
+                    $colorIndex = 0;
+                    $output = '';
+
+                    for ($i = 0; $i < strlen($title); $i++) {
+                        $char = $title[$i];
+                        if ($char === ' ') {
+                            $output .= ' ';
+                        } else {
+                            $output .=
+                                '<span class="letter-' . $colorIndex % 7 . '">' . htmlspecialchars($char) . '</span>';
+                            $colorIndex++;
+                        }
+                    }
+                @endphp
+
+                <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+                    {!! $output !!}
                 </h2>
-                <p class="max-w-2xl mx-auto text-lg text-gray-600">
-                    Dokter ramah dan berpengalaman siap merawat dengan penuh kasih sayang
-                </p>
-                <div
-                    class="w-24 h-1 mx-auto mt-6 rounded-full bg-gradient-to-r from-medical-primary via-purple-400 to-pink-400">
-                </div>
+                <div class="w-24 h-1 mx-auto mb-6 rounded-full bg-medical-primary"></div>
             </div>
 
             <!-- Doctors Grid -->
             <div class="flex flex-wrap justify-center gap-8 mx-auto">
                 @foreach ($dokter as $index => $dokterItem)
                     <div
-                        class="relative w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 overflow-hidden transition-all duration-300 transform rounded-3xl hover:shadow-2xl hover:-translate-y-2 group
-                    @if ($index % 3 == 0) bg-[#DEC8FE]
-                    @elseif($index % 3 == 1) bg-[#704FE6]
-                    @else bg-[#FFD464] @endif">
+                        class="relative w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-8 overflow-hidden transition-all duration-300 transform rounded-3xl hover:shadow-2xl hover:-translate-y-2 group border-4
+            @if ($index % 4 == 0) bg-purple-100 border-purple-400
+            @elseif($index % 4 == 1)
+                bg-blue-500 border-blue-600
+            @elseif($index % 4 == 2)
+                bg-yellow-300 border-yellow-500
+            @else
+                bg-purple-200 border-purple-400 @endif">
 
-                        <!-- Decorative Circle Pattern (Top Left) -->
+                        <!-- Decorative Circle Pattern (Top Left) - Lebih kecil -->
                         <div
-                            class="absolute w-40 h-40 rounded-full -top-10 -left-10 opacity-20
-                        @if ($index % 3 == 0) bg-[#704FE6]
-                        @elseif($index % 3 == 1) bg-[#FFD464]
-                        @else bg-white @endif">
+                            class="absolute w-24 h-24 rounded-full -top-6 -left-6 opacity-20
+                @if ($index % 4 == 0) bg-purple-500
+                @elseif($index % 4 == 1) bg-yellow-300
+                @elseif($index % 4 == 2) bg-white
+                @else bg-purple-400 @endif">
                         </div>
 
-                        <!-- Decorative Circles (Concentric Rings) -->
-                        <div
-                            class="absolute w-32 h-32 rounded-full border-8 -top-8 -left-8 opacity-25
-                        @if ($index % 3 == 0) border-[#704FE6]
-                        @elseif($index % 3 == 1) border-[#FFD464]
-                        @else border-white @endif">
-                        </div>
-
-                        <div
-                            class="absolute w-24 h-24 rounded-full border-8 -top-6 -left-6 opacity-30
-                        @if ($index % 3 == 0) border-[#704FE6]
-                        @elseif($index % 3 == 1) border-[#FFD464]
-                        @else border-white @endif">
-                        </div>
-
-                        <!-- Decorative Star (Top Right) -->
-                        <div class="absolute w-32 h-32 opacity-25 -top-4 -right-4">
+                        <!-- Decorative Star (Top Right) - Lebih kecil -->
+                        <div class="absolute w-20 h-20 opacity-20 -top-3 -right-3">
                             <svg viewBox="0 0 100 100"
                                 class="w-full h-full
-                            @if ($index % 3 == 0) fill-[#704FE6]
-                            @elseif($index % 3 == 1) fill-[#FFD464]
-                            @else fill-white @endif">
+                    @if ($index % 4 == 0) fill-purple-500
+                    @elseif($index % 4 == 1) fill-yellow-300
+                    @elseif($index % 4 == 2) fill-orange-400
+                    @else fill-purple-400 @endif">
                                 <polygon points="50,5 60,40 95,45 65,65 70,95 50,80 30,95 35,65 5,45 40,40" />
                             </svg>
                         </div>
 
-                        <!-- Decorative Zigzag Lines (Top Right) -->
-                        <div class="absolute -top-2 -right-2 opacity-30">
-                            <svg width="80" height="80" viewBox="0 0 80 80"
+                        <!-- Decorative Zigzag Lines (Bottom Right) -->
+                        <div class="absolute -bottom-2 -right-2 opacity-20">
+                            <svg width="60" height="60" viewBox="0 0 60 60"
                                 class="
-                            @if ($index % 3 == 0) stroke-[#704FE6]
-                            @elseif($index % 3 == 1) stroke-[#FFD464]
-                            @else stroke-white @endif"
-                                fill="none" stroke-width="8">
-                                <path d="M10,10 L20,25 L10,40 L20,55 L10,70" />
-                                <path d="M30,10 L40,25 L30,40 L40,55 L30,70" />
-                                <path d="M50,10 L60,25 L50,40 L60,55 L50,70" />
+                    @if ($index % 4 == 0) stroke-purple-500
+                    @elseif($index % 4 == 1) stroke-yellow-300
+                    @elseif($index % 4 == 2) stroke-orange-400
+                    @else stroke-purple-400 @endif"
+                                fill="none" stroke-width="6">
+                                <path d="M5,5 L15,20 L5,35 L15,50" />
+                                <path d="M25,5 L35,20 L25,35 L35,50" />
+                                <path d="M45,5 L55,20 L45,35 L55,50" />
                             </svg>
                         </div>
 
                         <!-- Doctor Photo Container -->
                         <div
-                            class="relative z-10 flex items-center justify-center mx-auto mb-6 transition-transform duration-300 w-36 h-36 group-hover:scale-110">
-                            <div class="overflow-hidden border-4 border-white rounded-full shadow-xl w-36 h-36">
-                                <img src="{{ $dokterItem->image ? asset('storage/' . $dokterItem->image) : asset('assets/default.jpg') }}"
-                                    alt="{{ $dokterItem->nama_dokter }}" class="object-cover w-full h-full">
-                            </div>
+                            class="relative z-10 flex items-center justify-center mx-auto mb-6 transition-transform duration-300 w-32 h-32 rounded-full group-hover:scale-110 border-4
+                @if ($index % 4 == 0) border-purple-500
+                @elseif($index % 4 == 1) border-yellow-500
+                @elseif($index % 4 == 2) border-orange-500
+                @else border-purple-500 @endif">
+                            <img src="{{ $dokterItem->image ? asset('storage/' . $dokterItem->image) : asset('assets/default.jpg') }}"
+                                alt="{{ $dokterItem->nama_dokter }}" class="object-cover w-full h-full rounded-full"
+                                loading="lazy">
                         </div>
 
                         <!-- Doctor Name -->
                         <h3
-                            class="relative z-10 mb-3 text-xl font-bold text-center transition-colors duration-300
-                        @if ($index % 3 == 0) text-[#704FE6]
-                        @elseif($index % 3 == 1) text-white
-                        @else text-gray-900 @endif">
+                            class="text-center relative z-10 mb-3 text-xl font-bold transition-colors duration-300
+                @if ($index % 4 == 0) text-purple-700
+                @elseif($index % 4 == 1) text-white
+                @elseif($index % 4 == 2) text-gray-900
+                @else text-purple-700 @endif">
                             {{ $dokterItem->nama_dokter }}
                         </h3>
 
-                        <!-- SIP Badge -->
-                        <div class="relative z-10 text-center">
-                            <span
-                                class="inline-block px-4 py-2 text-sm font-semibold rounded-full
-                            @if ($index % 3 == 0) bg-white text-[#704FE6]
-                            @elseif($index % 3 == 1) bg-[#FFD464] text-gray-900
-                            @else bg-white text-gray-900 @endif">
-                                {{ $dokterItem->sip }}
-                            </span>
-                        </div>
-
+                        <!-- Optional: Doctor Specialty (if exists) -->
+                        @if (isset($dokterItem->spesialisasi))
+                            <p
+                                class="text-center relative z-10 text-sm
+                    @if ($index % 4 == 0) text-purple-600
+                    @elseif($index % 4 == 1) text-white/95
+                    @elseif($index % 4 == 2) text-gray-800
+                    @else text-purple-600 @endif">
+                                {{ $dokterItem->spesialisasi }}
+                            </p>
+                        @endif
                     </div>
                 @endforeach
             </div>
+
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="relative py-20 overflow-hidden bg-white">
-
+    <section class="relative py-20 overflow-hidden bg-white"
+        style="background-image: url('{{ asset('assets/bg7.png') }}'); background-size: cover; background-position:center;">
         <div class="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="grid items-center grid-cols-1 gap-16 lg:grid-cols-2">
 
                 <!-- Left Side - Text -->
                 <div class="relative z-10">
 
-                    <h2 class="relative mb-4 text-4xl font-bold text-medical-primary md:text-5xl">
-                        Testimoni <span class="text-medical-warning">Pasien Kami</span>
+                    @php
+                        $title = 'Testimoni Pasien Kami';
+                        $colorIndex = 0;
+                        $output = '';
+
+                        for ($i = 0; $i < strlen($title); $i++) {
+                            $char = $title[$i];
+                            if ($char === ' ') {
+                                $output .= ' ';
+                            } else {
+                                $output .=
+                                    '<span class="letter-' .
+                                    $colorIndex % 7 .
+                                    '">' .
+                                    htmlspecialchars($char) .
+                                    '</span>';
+                                $colorIndex++;
+                            }
+                        }
+                    @endphp
+
+                    <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+                        {!! $output !!}
                     </h2>
 
                     <div
@@ -776,9 +1050,8 @@
     </section>
 
 
-
     <!-- Footer -->
-    <footer class="py-16 text-white bg-gray-900">
+    <footer class="py-16 text-white bg-[#0A1A58]">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="grid gap-8 mb-8 md:grid-cols-4">
                 <!-- Clinic Info -->
@@ -1045,7 +1318,7 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="fixed z-50 bottom-6 right-6">
-        <a href="https://wa.me/6281234567890" target="_blank"
+        <a href="https://wa.me/6285236959788?text=Halo%20saya%20ingin%20konsultasi" target="_blank"
             class="flex items-center justify-center transition-all duration-300 bg-green-500 rounded-full shadow-lg w-14 h-14 hover:bg-green-600 hover:shadow-xl pulse-ring">
             <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path

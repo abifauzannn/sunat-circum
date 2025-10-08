@@ -12,7 +12,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Quicksand", ...defaultTheme.fontFamily.sans],
+                sans: ["Fredoka", ...defaultTheme.fontFamily.sans],
             },
         },
     },

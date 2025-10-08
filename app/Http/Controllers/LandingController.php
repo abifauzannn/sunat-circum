@@ -8,6 +8,7 @@ use App\Models\Dokter;
 use App\Models\Fasilitas;
 use App\Models\Klinik;
 use App\Models\Lokasi;
+use App\Models\Metode;
 use App\Models\Paket;
 use App\Models\Promo;
 use App\Models\Review;
@@ -31,7 +32,8 @@ class LandingController extends Controller
     $testimonis = Testimoni::get();
     $promo = Promo::get();
     $lokasi = Lokasi::get();
-    return view('landing.index', compact('why', 'klinik', 'review', 'service', 'banner', 'paket', 'fasilitas', 'dokter', 'testimonis', 'promo', 'lokasi'));
+    $metode = Metode::get();
+    return view('landing.index', compact('why', 'klinik', 'review', 'service', 'banner', 'paket', 'fasilitas', 'dokter', 'testimonis', 'promo', 'lokasi', 'metode'));
 }
 
 }
