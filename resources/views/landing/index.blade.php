@@ -14,7 +14,7 @@
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="i8TS0P9jzlw8dSDhA51Ap6BxN_OMp3yzLLiu5SygRr0" />
 
-    <link rel="icon" href="/favicon.png" type="image/png" sizes="512x512">
+    <link rel="icon" href="{{ asset('assets/home.png') }}" type="image/png">
 
     <style>
         [x-cloak] {
